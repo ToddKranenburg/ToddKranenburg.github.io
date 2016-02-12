@@ -182,6 +182,8 @@ body {
 	}
 
 	.icon {
+		width: 72px;
+		height: 72px;
 		margin-right: 12px;
 	}
 
@@ -191,7 +193,7 @@ body {
 	}
 
 	.nav li[data-slide="2"] {
-		background-color: #1abc9c;
+		background-color: white;
 	}
 
 	.nav li[data-slide="3"] {
@@ -310,8 +312,8 @@ body {
 }
 
 #slide-2 {
-	background-color: #1abc9c;
-	color: #e4e6e5;
+	background-color: white;
+	color: black;
 	padding-top: 90px;
 }
 
@@ -321,7 +323,7 @@ body {
 	}
 
 	.line-row .hr {
-		background-color: #e4e6e5;
+		background-color: #ccc;
 		height: 5px;
 		margin: 0 auto;
 		width: 33%;
@@ -617,4 +619,8 @@ body {
 
 .navigation-slide {
 	cursor: pointer;
+}
+
+.todd-logo {
+	width: 20%;
 }

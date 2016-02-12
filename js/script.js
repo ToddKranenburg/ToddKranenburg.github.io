@@ -223,11 +223,7 @@ jQuery(document).ready(function ($) {
 		} else if (toddLink) {
 			window.location.href = toddLink;
 		} else if (toddDownload) {
-			var $toddDownloadLink = $('#todd-download-link');
-			$toddDownloadLink.attr({target: '_blank', href: toddDownload});
-			debugger
-			$toddDownloadLink.on("click", function () {console.log("here");});
-			$toddDownloadLink.trigger("click");
+			window.location.href = toddDownload;
 		}
 	});
 });
