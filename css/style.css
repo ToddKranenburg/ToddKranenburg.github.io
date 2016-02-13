@@ -226,7 +226,7 @@ body {
 }
 
 #slide-1 {
-	background-image: url('../images/bg1.jpg');
+	background-image: url('../images/overland.jpeg');
 	color: #ffffff;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -394,8 +394,9 @@ body {
 	background-color: #000;
 	margin: 0 auto;
 	overflow: hidden;
-	padding: 0;
-	text-align: left;
+	padding: 0px;
+	padding-left: 115px;
+	text-align: center;
 	width: 100%;
 }
 
@@ -545,7 +546,7 @@ body {
 }
 
 .zoom {
-	background-image: url('../images/zoom.png');
+	background-image: url('../images/web.png');
 	background-position: center center;
 	background-repeat: no-repeat;
 	height: 100%;

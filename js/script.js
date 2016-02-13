@@ -105,7 +105,8 @@ $(function() {
 					images_per_row = gallery_images.length / 2 + 1;
 				}
 
-				var gallery_width = $('#slide-3 img').width() * $('#slide-3 img').length;
+				// var gallery_width = $('#slide-3 img').width() * $('#slide-3 img').length;
+				var gallery_width = 1356;
 				gallery_width /= 2;
 				if ( $('#slide-3 img').length % 2 != 0 ) {
 					gallery_width += $('#slide-3 img').width();
@@ -287,6 +288,12 @@ jQuery(document).ready(function ($) {
 				'linear'
 			);
 			$('.zoom').remove();
+		}
+	);
+
+	images.click(
+		function (e) {
+			window.location.href = e.currentTarget.href;
 		}
 	);
 });
