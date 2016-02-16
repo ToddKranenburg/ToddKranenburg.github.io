@@ -274,8 +274,9 @@ jQuery(document).ready(function ($) {
 				'linear'
 			);
 			var zoom = $('<div class="zoom"></div>');
-			if ( $(this).hasClass('video') ) {
-				zoom.addClass('video');
+
+			if ( asta.hasClass('thumb-2') ) {
+				zoom = $('<div class="zoom-2"></div>');
 			}
 			$(this).prepend(zoom);
 		},
@@ -288,6 +289,7 @@ jQuery(document).ready(function ($) {
 				'linear'
 			);
 			$('.zoom').remove();
+			$('.zoom-2').remove();
 		}
 	);
 

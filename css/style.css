@@ -64,6 +64,7 @@ body {
 	border-bottom: 0 none;
 	font-size: 12px;
 	transition: .25s all linear;
+	padding-left: 300px;
 }
 
 .navbar.inv {
@@ -499,6 +500,9 @@ body {
 
 	#contact-row-4 {
 		padding-top: 125px;
+		position: absolute;
+		width: 2000px;
+		left: -140px;
 	}
 
 	#contact-row-4 .col-12 {
@@ -547,6 +551,18 @@ body {
 
 .zoom {
 	background-image: url('../images/web.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+.zoom-2 {
+	background-image: url('../images/github-icon-old.png');
 	background-position: center center;
 	background-repeat: no-repeat;
 	height: 100%;
