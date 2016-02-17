@@ -500,9 +500,11 @@ body {
 
 	#contact-row-4 {
 		padding-top: 125px;
+		padding-left: 515px;
 		position: absolute;
 		width: 2000px;
-		left: -140px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	#contact-row-4 .col-12 {
@@ -527,6 +529,7 @@ body {
 	#contact-row-4 .col-12 .hover-text {
 		display: none;
 		font-size: 20px;
+		text-align: center;
 	}
 
 #slide-7 {
