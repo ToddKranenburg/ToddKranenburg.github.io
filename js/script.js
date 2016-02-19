@@ -64,7 +64,7 @@ $(document).ready(function(e) {
 			img_loaded += 1;;
 			if ( img_loaded == $('#slide-3 img').length ) {
 				$(function() {
-					var pause = 0;
+					var pause = 5;
 					$(document).scroll(function(e) {
 						delay(function() {
 
@@ -170,7 +170,7 @@ function menu_focus( element, i ) {
 			left: left_pos,
 			width: el_width
 		},
-		1500,
+		500,
 		'easeInOutQuart'
 	);
 }
@@ -207,7 +207,7 @@ jQuery(document).ready(function ($) {
 
 		htmlbody.stop(false, false).animate({
 			scrollTop: offset_top
-		}, 1500, 'easeInOutQuart');
+		}, 500, 'easeInOutQuart');
 	}
 
 	//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
@@ -349,14 +349,14 @@ jQuery(document).ready(function ($) {
 		if ( offset_top != false ) {
 			htmlbody.stop(false, false).animate({
 				scrollTop: offset_top
-			}, 1500, 'easeInOutQuart');
+			}, 500, 'easeInOutQuart');
 		}
 
 		if ( offset_left != false ) {
 			if ( $('#slide-3 .row').width() != $('body').width() ) {
 				$('#slide-3 .row').stop(false, false).animate({
 					left: offset_left
-				}, 1500, 'easeInOutQuart');
+				}, 500, 'easeInOutQuart');
 			}
 		}
 	});
