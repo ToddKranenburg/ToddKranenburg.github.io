@@ -4,6 +4,12 @@ $(document).ready(function(e) {
 		e.stopPropagation();
 	});
 
+	$('.project-link').click(function (e) {
+		window.location.href = e.currentTarget.href;
+	});
+
+
+
 	/***************
 	* = Hover text *
 	* Hover text for the last slide
@@ -14,13 +20,13 @@ $(document).ready(function(e) {
 			$(this).find('.hover-text')
 				.show()
 				.css('opacity', 0)
-				.delay(200)
+				.delay(1)
 				.animate(
 					{
 						paddingTop: '25px',
 						opacity: 1
 					},
-					'fast',
+					100,
 					'linear'
 				);
 		},
@@ -32,7 +38,7 @@ $(document).ready(function(e) {
 						paddingTop: '0',
 						opacity: 0
 					},
-					'fast',
+					100,
 					'linear',
 					function() {
 						$(this).hide();
@@ -58,7 +64,7 @@ $(document).ready(function(e) {
 			img_loaded += 1;;
 			if ( img_loaded == $('#slide-3 img').length ) {
 				$(function() {
-					var pause = 10;
+					var pause = 0;
 					$(document).scroll(function(e) {
 						delay(function() {
 
@@ -89,42 +95,42 @@ $(document).ready(function(e) {
 
 });
 
-/******************
-* = Gallery width *
-******************/
-$(function() {
-	var pause = 50; // will only process code within delay(function() { ... }) every 100ms.
-	$(window).resize(function() {
-		delay(function() {
-				var gallery_images = $('#slide-3 img');
-
-				var images_per_row = 0;
-				if ( gallery_images.length % 2 == 0 ) {
-					images_per_row = gallery_images.length / 2;
-				} else {
-					images_per_row = gallery_images.length / 2 + 1;
-				}
-
-				// var gallery_width = $('#slide-3 img').width() * $('#slide-3 img').length;
-				var gallery_width = 1356;
-				gallery_width /= 2;
-				if ( $('#slide-3 img').length % 2 != 0 ) {
-					gallery_width += $('#slide-3 img').width();
-				}
-
-				$('#slide-3 .row').css('width', gallery_width );
-
-				var left_pos = $('#slide-3 .row').width() - $('body').width();
-				left_pos /= -2;
-
-				$('#slide-3 .row').css('left', left_pos);
-
-			},
-			pause
-		);
-	});
-	$(window).resize();
-});
+// /******************
+// * = Gallery width *
+// ******************/
+// $(function() {
+// 	var pause = 50; // will only process code within delay(function() { ... }) every 100ms.
+// 	$(window).resize(function() {
+// 		delay(function() {
+// 				var gallery_images = $('#slide-3 img');
+//
+// 				var images_per_row = 0;
+// 				if ( gallery_images.length % 2 == 0 ) {
+// 					images_per_row = gallery_images.length / 2;
+// 				} else {
+// 					images_per_row = gallery_images.length / 2 + 1;
+// 				}
+//
+// 				// var gallery_width = $('#slide-3 img').width() * $('#slide-3 img').length;
+// 				var gallery_width = 1356;
+// 				gallery_width /= 2;
+// 				if ( $('#slide-3 img').length % 2 != 0 ) {
+// 					gallery_width += $('#slide-3 img').width();
+// 				}
+//
+// 				$('#slide-3 .row').css('width', gallery_width );
+//
+// 				var left_pos = $('#slide-3 .row').width() - $('body').width();
+// 				left_pos /= -2;
+//
+// 				$('#slide-3 .row').css('left', left_pos);
+//
+// 			},
+// 			pause
+// 		);
+// 	});
+// 	$(window).resize();
+// });
 
 var delay = (function(){
 	var timer = 0;
@@ -133,7 +139,7 @@ var delay = (function(){
 		timer = setTimeout(callback, ms);
 	};
 })();
-
+//
 function menu_focus( element, i ) {
 	if ( $(element).hasClass('active') ) {
 		if ( i == 6 ) {
@@ -238,6 +244,7 @@ jQuery(document).ready(function ($) {
 
 	menu_item.hover(
 		function(e) {
+
 			var icon = $(this).find('.icon');
 
 			var left_pos = icon.offset().left - $('.nav').offset().left;
@@ -259,46 +266,45 @@ jQuery(document).ready(function ($) {
 /******************
 * = Gallery hover *
 ******************/
-jQuery(document).ready(function ($) {
-	//Cache some variables
-	var images = $('#slide-3 a');
+// jQuery(document).ready(function ($) {
+// 	//Cache some variables
+// 	var images = $('#slide-3 a');
 
-	images.hover(
-		function(e) {
-			var asta = $(this).find('img');
-			$('#slide-3 img').not( asta ).stop(false, false).animate(
-				{
-					opacity: .5
-				},
-				'fast',
-				'linear'
-			);
-			var zoom = $('<div class="zoom"></div>');
-
-			if ( asta.hasClass('thumb-2') ) {
-				zoom = $('<div class="zoom-2"></div>');
-			}
-			$(this).prepend(zoom);
-		},
-		function(e) {
-			$('#slide-3 img').stop(false, false).animate(
-				{
-					opacity: 1
-				},
-				'fast',
-				'linear'
-			);
-			$('.zoom').remove();
-			$('.zoom-2').remove();
-		}
-	);
-
-	images.click(
-		function (e) {
-			window.location.href = e.currentTarget.href;
-		}
-	);
-});
+// 	images.hover(
+// 		function(e) {
+// 			var asta = $(this).find('img');
+// 			$('#slide-3 img').not( asta ).stop(false, false).animate(
+// 				{
+// 					opacity: .5
+// 				},
+// 				'fast',
+// 				'linear'
+// 			);
+// 			var zoom = $('<div class="zoom"></div>');
+//
+// 			if ( asta.hasClass('thumb-2') ) {
+// 				zoom = $('<div class="zoom-2"></div>');
+// 			}
+// 			// $(this).prepend(zoom);
+// 		},
+// 		function(e) {
+// 			$('#slide-3 img').stop(false, false).animate(
+// 				{
+// 					opacity: 1
+// 				},
+// 				'fast',
+// 				'linear'
+// 			);
+// 			$('.zoom').remove();
+// 			$('.zoom-2').remove();
+// 		}
+// 	);
+//
+// 	images.click(
+// 		function (e) {
+// 		}
+// 	);
+// });
 
 /******************
 * = Arrows click  *
