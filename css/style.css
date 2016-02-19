@@ -653,7 +653,7 @@ body {
 	padding: 50px;
 	position: relative;
 	margin: auto;
-	width: 80%;
+	width: 100%;
 }
 
 .header-3 {
@@ -668,7 +668,7 @@ body {
 	display: block;
 	float: left;
 	width: 60%;
-	padding-left: 80px;
+	padding-left: 40px;
 	text-align: left;
 }
 .project-name {
