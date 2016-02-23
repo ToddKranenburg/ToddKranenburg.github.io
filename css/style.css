@@ -438,7 +438,8 @@ body {
 	}
 
 	#slide-3 a,
-	#slide-3 img {
+	#slide-3 img,
+	#slide-3 video {
 		height: auto;
 		max-height: 100%;
 		max-width: 100%;
